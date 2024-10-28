@@ -15,6 +15,9 @@ const geistMono = localFont({
 
 export default function Home() {
   useEffect(() => {
+      if(TE !== undefined && TE.onLoaded) {
+        TE.onLoaded();
+      }
       document.addEventListener('becLoaded', function (event : unknown) {
         console.log("🚀 ~ event:", event)
         if (typeof TE !== 'undefined' && TE.configureOfferWallStyle) {
