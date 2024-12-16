@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  reactStrictMode: true,
-  trailingSlash: true
+const isProd = process.env.NODE_ENV === 'production';
+const nextConfig : NextConfig = {
+  basePath: isProd ? '/nextjs-page-router' : '',
+  trailingSlash: isProd, 
+  assetPrefix: isProd ? '/nextjs-page-router' : ''
 };
 
-export default nextConfig;
+module.exports = nextConfig;
