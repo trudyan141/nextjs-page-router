@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const scriptSrc =
     env === "dev"
       ? "https://bec-dev.apps-network.net/latest/bec.js?walletAddress=QnLOYksIDhA3MfBLoRL%2ByIa8jRggeovB3NtN3d7LD7g%3D"
-      : "https://bec.apps-network.net/latest/bec.js?walletAddress=QnLOYksIDhA3MfBLoRL%2ByIa8jRggeovB3NtN3d7LD7g%3D";
+      : "https://bec-dev.apps-network.net/latest/bec.js?walletAddress=QnLOYksIDhA3MfBLoRL%2ByIa8jRggeovB3NtN3d7LD7g%3D"
   return <>
     {env && <Script
       src={scriptSrc}
